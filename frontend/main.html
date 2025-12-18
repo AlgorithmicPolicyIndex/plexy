@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plexy</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div id="app-root">
+        <aside id="app-list">
+            <div id="app-list-scroll"></div>
+            
+            <button id="open-apps-folder">Open Apps Folder</button>
+        </aside>
+
+        <main id="app-preview">
+            <div id="preview-header">
+                <h2 id="preview-title">Select an app!</h2>
+            </div>
+
+            <div id="preview-content">
+                <iframe id="preview-frame" sandbox></iframe>
+
+                <button id="launch-button" disabled>Launch</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html
