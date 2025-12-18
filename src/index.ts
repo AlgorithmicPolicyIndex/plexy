@@ -33,6 +33,9 @@ if (!fs.existsSync(baseDir))
 
 app.setPath("userData", baseDir);
 const APPS_DIR = path.join(app.getPath("userData"), "Apps");
+if (!fs.existsSync(APPS_DIR)) {
+    fs.mkdirSync(APPS_DIR, { recursive: true });
+}
 
 let watchTimeout: NodeJS.Timeout | null = null;
 fs.watch(APPS_DIR, { recursive: true}, () => {
@@ -46,10 +49,6 @@ fs.watch(APPS_DIR, { recursive: true}, () => {
 });
 
 function getApps() {
-    if (!fs.existsSync(APPS_DIR)) {
-        fs.mkdirSync(APPS_DIR, { recursive: true });
-    }
-
     return fs
         .readdirSync(APPS_DIR, { withFileTypes: true })
         .filter(dirent => dirent.isDirectory())
