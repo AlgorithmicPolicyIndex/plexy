@@ -68,6 +68,24 @@ html, body {
     border-bottom: 1px solid #222;
 }
 
+#close {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: red;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 11;
+}
+#close:hover {
+    background: rgba(255, 80, 80, 0.8);
+}
+
 #preview-content {
     flex: 1;
     overflow: auto;

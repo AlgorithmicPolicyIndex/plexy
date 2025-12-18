@@ -136,3 +136,5 @@ dist
 .pnp.*
 
 bun.lock
+build/
+.idea/

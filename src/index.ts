@@ -112,3 +112,6 @@ ipcMain.on("plexy:launch-app", (_event, appName) => {
 ipcMain.on("plexy:open-apps-folder", () => {
     shell.openPath(APPS_DIR);
 });
+ipcMain.on("plexy:close", () => {
+    return app.quit();
+})
